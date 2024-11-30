@@ -14,6 +14,6 @@ router.get('/', limiter, getItems)
 router.post('/', addItem)
 
 // search in the list
-router.post('/search', search)
+router.post('/search', limiter, search)
 
 module.exports = router
